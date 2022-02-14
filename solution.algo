@@ -1,0 +1,23 @@
+ALGORITHM Mot
+VAR
+    NB,i,L N_V : integer; ch: STRING;
+BEGIN
+Write('Entrer une phrase: la vie est belle');
+read(ch);
+NB:=0; i:=0; L:=length(ch);
+REPEAT
+   i:=i+1;
+   WHILE (i<=L)AND (ch[i]='') DO
+   i:=i+1;
+   END_WHILE
+   IF (i<=L) THEN
+    WHILE (i<=L) AND(ch[i]<>'') DO
+    i:=i+1;
+    NB:=NB+1;
+    N_V:=N_V+1;
+   END_IF;
+   END_WHILE;
+Write('le nombre de mot dans ch=',NB);
+Write('le nombre de vowell')
+END.
+
