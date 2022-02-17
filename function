@@ -1,0 +1,22 @@
+ALGORITHM Produit scalaire
+VAR
+v1, v2 : ARRAY_OF_INTEGER[50];
+
+BEGIN
+IF (P_V(v1,v2)=0) THEN
+write("v1 et v2 sont orthogoneaux")
+ELSE
+    write("v1 et v2 ne sont pas orthogoneaux")
+    
+END_IF
+FUNCTION P_V(v1,v2) : INTEGER
+VAR
+ i,Sum:INTEGER
+BEGIN
+ Sum=0;
+FOR i FROM 0 TO v1.length-1 DO
+ Sum:= Sum + (v1[i]*v2[i])
+END_FOR
+   
+    RETURN Sum ;
+END.
